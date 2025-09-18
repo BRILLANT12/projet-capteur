@@ -165,16 +165,26 @@
 <body>
   <header>
     <div class="logo-titre">
-      <img src="capteur.png" alt="Logo capteur" class="logo-cust">
+     <img src="images/capteur.png" alt="Logo capteur" class="logo-cust">
       <span id="titrePage">Dashboard Capteur</span>
+      
     </div>
     <div class="lang-bar">
       <label for="langSelect">Langue :</label>
-      <select id="langSelect" aria-label="Choix de la langue">
-        <option value="fr" selected>FR</option>
-        <option value="en">EN</option>
-        <option value="es">ES</option>
+      <select id="langSelect" aria-label="Choix de la langue" onchange="changerLangue(this.value)">
+         <option value="fr" selected>FR</option>
+         <option value="en">EN</option>
+         <option value="es">ES</option>
       </select>
+      <script>
+function changerLangue(lang) {
+  alert("Vous avez choisi la langue : " + lang);
+  // Ici tu peux ajouter ton code pour afficher/rendre visible les contenus en fonction de la langue
+}
+</script>
+
+
+      
     </div>
   </header>
   <div class="dashboard" id="mainBoard" role="main" aria-label="Tableau de bord capteur">

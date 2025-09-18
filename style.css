@@ -2,9 +2,11 @@ body {
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #0e223a url('3409297.jpg') no-repeat center center fixed;
+    background: #0e223a url('images/3409297.jpg') no-repeat center center fixed;
     background-size: cover;
+    
 }
+
 body::before {
             content: "";
             position: fixed;
@@ -36,6 +38,7 @@ body::before {
             display: inline-block;
             vertical-align: middle;
         }
+        
         header p {
             font-size: 1.2em;
             margin: 12px 0 0 0;
@@ -131,7 +134,8 @@ body::before {
                } 
             header h1 {
               font-size: 2em;
-            }          
+            } 
+                     
         }
     
             

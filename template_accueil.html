@@ -1,44 +1,48 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Accueil - Projet Capteur</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Accueil - Projet Capteur</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-         <a href="accueil.php"><img src="capteur (1).png" alt="Logo Capteur de distance" class="logo-zoom"></a>
+    <header>
+        <!-- Correction du chemin de l'image selon dossier dans VSCode -->
+        <a href="accueil.php"><img src="images/capteur.png" alt="Logo Capteur de distance" class="logo-zoom"></a>
 
-        <div>
-            <h1>{{message}}</h1>
-            <p style="font-size:1.15em; color:#e0eafc; margin-top:8px; margin-bottom:0;">
-               Mesurez la distance en temps réel avec précision et simplicité.
-            <p>Nous sommes le {{date_du_jour}}</p>
-        </div>
-    </header>
+        <div>
+            <h1>Bienvenue sur projet Capteur distance </h1>
+            <p style="font-size:1.15em; color:#e0eafc; margin-top:8px; margin-bottom:0;">
+               Mesurez la distance en temps réel avec précision et simplicité. Nous sommes le <span id ="date-du-jour"></span> </p><script>
+               const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+               const dateDuJour = new Date().toLocaleDateString('fr-FR', options);
+              document.getElementById('date-du-jour').textContent = dateDuJour;
+         </script
+        </div>
+    </header>
 
-    <nav>
-        <ul>
-            <li><a href="accueil.php">Accueil</a></li>
-            <li><a href="capteur.php">Capteur</a></li>
-            <li><a href="contact.php">Contact</a></li>
-        </ul>
-    </nav>
+    <nav>
+        <ul>
+            <li><a href="view/">Accueil</a></li>
+            <li><a href="capteur.php">Capteur</a></li>
+            <li><a href="contact.php">Contact</a></li>
+        </ul>
+    </nav>
 
-    <main>
-        <h2>Présentation du Projet</h2>
-        <p>
-            Ce projet permet de mesurer et d’afficher la distance détectée par un capteur connecté à un microcontrôleur.<br>
-            Accédez à la page <strong>Capteur</strong> pour consulter les mesures en temps réel ou l’historique des données.
-        </p>
-        <a href="capteur.php" class="cta-btn">Voir les mesures du capteur</a>
-    </main>
+    <main>
+        <h2>Présentation du Projet</h2>
+        <p>
+            Ce projet permet de mesurer et d’afficher la distance détectée par un capteur connecté à un microcontrôleur.<br>
+            Accédez à la page <strong>Capteur</strong> pour consulter les mesures en temps réel ou l’historique des données.
+        </p>
+        <a href="index.html" class="cta-btn">Voir les mesures du capteur</a>
+    </main>
 
-    <footer>
-        © 2025 Projet Capteur. Tous droits réservés.
-    </footer>
+    <footer>
+        © 2025 Projet Capteur. Tous droits réservés.
+    </footer>
 
 </body>
 </html>
