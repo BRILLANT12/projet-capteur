@@ -25,7 +25,7 @@ header {
     padding: 40px 10px 20px 40px;
     display: flex;
     align-items: center;
-    flex-wrap: wrap; /* ajout pour meilleure gestion petits écrans */
+    flex-wrap: wrap; /* pour s’adapter sur mobil */
 }
 header img {
     height: 85px;
@@ -38,13 +38,13 @@ header h1 {
     letter-spacing: 1px;
     display: inline-block;
     vertical-align: middle;
-    flex-grow: 1; /* occupe l’espace restant */
-    min-width: 0; /* pour éviter l’effet overflow */
+    flex-grow: 1; /* occupe l’espace disponible */
+    min-width: 0; 
 }
 header p {
     font-size: 1.2em;
     margin: 12px 0 0 0;
-    width: 100%; /* occupe la ligne suivante */
+    width: 100%; /* pour qu'il soit en dessous */
 }
 nav ul {
     list-style-type: none;
@@ -118,27 +118,43 @@ footer {
 @media (max-width: 700px) {
     main {
         padding: 20px 8px;
-        max-width: 90%;
+        max-width: 95%;
         margin: 30px auto;
     }
     header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center; /* centre tout */
+        text-align: center;
         padding: 30px 10px 20px 10px;
     }
     header img {
         margin-bottom: 10px;
-        height: 60px; /* réduit la taille du logo sur petit écran */
-    }
-    nav ul li {
-        margin: 0 12px;
+        height: 60px;
+        margin-right: 0;
     }
     header h1 {
         font-size: 2em;
-        word-break: break-word; /* pour éviter débordement de texte */
+        width: 100%;
+        word-break: break-word;
+        margin-bottom: 8px;
     }
     header p {
         font-size: 1em;
         margin-top: 6px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    nav ul {
+        padding: 0;
+        margin: 0 auto 20px auto;
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+    nav ul li {
+        display: block;
+        margin: 0;
     }
 }
